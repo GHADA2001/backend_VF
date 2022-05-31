@@ -24,9 +24,9 @@ public class AlertController {
     public Alert updateAlert(@RequestBody Alert alert)
     { return alertService.updateAlert(alert);}
 
-    @GetMapping("/get/{description}")
-    public List<Alert> getAlert(@PathVariable("description") String description){
-        return alertService.getAlert(description);
+    @GetMapping("/get/{id}")
+    public List<Alert> getAlert(@PathVariable("id") int id){
+        return alertService.getAlert(id);
     }
 
     @DeleteMapping("/delete/{id}")
@@ -38,4 +38,6 @@ public class AlertController {
        return alertService.getAll();
     }
 
+    @GetMapping("/countAlert")
+    public  long count(){ return  alertService.countAlert();}
 }

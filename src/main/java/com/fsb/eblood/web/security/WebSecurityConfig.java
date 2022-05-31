@@ -61,7 +61,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/alert/save").permitAll()
                 .antMatchers("/api/pub/**").hasAnyAuthority("USER","DONOR")
                 .antMatchers("/api/user/**").hasAnyAuthority("ADMIN","USER","DONOR")
-                .antMatchers("/api/invitation/**").hasAuthority("ADMIN")
+                .antMatchers("/api/invitation/**").hasAnyAuthority("ADMIN","USER","DONOR")
                 .antMatchers("/api/fcm/**").hasAnyAuthority("USER","DONOR")
                 .antMatchers("/api/notification/**").hasAuthority("DONOR")
 

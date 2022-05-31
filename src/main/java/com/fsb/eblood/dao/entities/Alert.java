@@ -16,6 +16,7 @@ public class Alert {
     @SequenceGenerator(name = "alert_sequence", sequenceName = "alert_sequence",allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "alert_sequence")
     private int id;
+    private String createdOn;
     private String createdAt;
     private String description;
     private String receiver;
